@@ -8,5 +8,6 @@ namespace Chattruta.Repositories.Interfaces
     public interface IChattmeddelandeRepository
     {
 		IEnumerable<Chattmeddelande> Get();
+		void Create(Chattmeddelande chattmeddelande);
     }
 }

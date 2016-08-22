@@ -6,3 +6,28 @@
 		<li><strong>@chattmeddelande.Datum - @chattmeddelande.Namn</strong> <br />@chattmeddelande.Meddelande</li>
 	}
 </ul>
+
+@using(Html.BeginForm())
+{ 
+<table>
+	<tr>
+		<td>
+			Namn: 
+		</td>
+		<td>
+			<input type="text" id="namn" name="namn" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Meddelande:
+		</td>
+		<td>
+			<input type="text" id="meddelande" name="meddelande" />
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2"><input type="submit" /> </td>
+	</tr>
+</table>
+}

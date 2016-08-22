@@ -19,7 +19,14 @@ namespace Chattruta.Controllers
             return View(_context.Get());
         }
 
-        public IActionResult Error()
+		[HttpPost]
+		public IActionResult Index(string namn, string meddelande)
+		{
+			_context.Create(new Models.Chattmeddelande() { Datum = DateTime.Now, Namn = namn, Meddelande = meddelande });
+			return View(_context.Get());
+		}
+
+		public IActionResult Error()
         {
             return View();
         }
