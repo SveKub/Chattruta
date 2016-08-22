@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Chattruta.Repositories.Interfaces;
+using Chattruta.Models;
+using Chattruta.ViewModels;
 
 namespace Chattruta.Controllers
 {
@@ -16,14 +18,28 @@ namespace Chattruta.Controllers
 		}
         public IActionResult Index()
         {
-            return View(_context.Get());
+			var vmChattmeddelande = new VMChattmeddelande();
+			vmChattmeddelande.Chattmeddelanden = _context.Get();
+            return View(vmChattmeddelande);
         }
 
 		[HttpPost]
-		public IActionResult Index(string namn, string meddelande)
+		public IActionResult Index(Chattmeddelande chattmeddelande)
 		{
-			_context.Create(new Models.Chattmeddelande() { Datum = DateTime.Now, Namn = namn, Meddelande = meddelande });
-			return View(_context.Get());
+			chattmeddelande.Datum = DateTime.Now;
+			if (ModelState.IsValid)
+			{
+				_context.Create(chattmeddelande);
+				return RedirectToAction("Index", "Home");
+			}
+			else
+			{
+				var vmChattmeddelande = new VMChattmeddelande();
+				vmChattmeddelande.Chattmeddelanden = _context.Get();
+				vmChattmeddelande.Chattmeddelande = chattmeddelande;
+				return View(vmChattmeddelande);
+			}
+			
 		}
 
 		public IActionResult Error()

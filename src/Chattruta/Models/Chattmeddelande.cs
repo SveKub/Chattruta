@@ -11,7 +11,7 @@ namespace Chattruta.Models
 		[Key]
 		public int Id { get; set; }
 		public DateTime Datum { get; set; }
-		[MaxLength(80)]
+		[MaxLength(80, ErrorMessage = "Namnet kan max vara 80 tecken långt. ")]
 		public string Namn { get; set; }
 		[MaxLength(240)]
 		public string Meddelande { get; set; }

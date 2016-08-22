@@ -1,21 +1,24 @@
-﻿@model IEnumerable<Chattruta.Models.Chattmeddelande>
+﻿@model Chattruta.ViewModels.VMChattmeddelande
 
 <ul>
-	@foreach (var chattmeddelande in Model)
+	@foreach (var chattmeddelande in Model.Chattmeddelanden)
 	{
 		<li><strong>@chattmeddelande.Datum - @chattmeddelande.Namn</strong> <br />@chattmeddelande.Meddelande</li>
 	}
 </ul>
 
+
+
 @using(Html.BeginForm())
-{ 
+{
 <table>
 	<tr>
 		<td>
 			Namn: 
 		</td>
 		<td>
-			<input type="text" id="namn" name="namn" />
+			@Html.TextBoxFor(c => c.Chattmeddelande.Namn)
+			@Html.ValidationMessageFor(c => c.Chattmeddelande.Namn)
 		</td>
 	</tr>
 	<tr>
@@ -23,7 +26,8 @@
 			Meddelande:
 		</td>
 		<td>
-			<input type="text" id="meddelande" name="meddelande" />
+			@Html.TextBoxFor(c => c.Chattmeddelande.Meddelande)
+			@Html.ValidationMessageFor(c => c.Chattmeddelande.Meddelande)
 		</td>
 	</tr>
 	<tr>
