@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Chattruta.Models.Chattmeddelande>
+
+<ul>
+	@foreach (var chattmeddelande in Model)
+	{
+		<li><strong>@chattmeddelande.Datum - @chattmeddelande.Namn</strong> <br />@chattmeddelande.Meddelande</li>
+	}
+</ul>

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D147D905-9990-4B45-9E2B-0E775FAAAF0D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2A2047F3-B735-47A0-AECD-945BFF843902}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Chattruta", "src\Chattruta\Chattruta.xproj", "{5BCEDD40-1B86-42D2-9A0D-CB437A5C7E89}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BCEDD40-1B86-42D2-9A0D-CB437A5C7E89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BCEDD40-1B86-42D2-9A0D-CB437A5C7E89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BCEDD40-1B86-42D2-9A0D-CB437A5C7E89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BCEDD40-1B86-42D2-9A0D-CB437A5C7E89}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5BCEDD40-1B86-42D2-9A0D-CB437A5C7E89} = {D147D905-9990-4B45-9E2B-0E775FAAAF0D}
+	EndGlobalSection
+EndGlobal
